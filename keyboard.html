@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        margin: 0;
+        overflow: hidden;
+    }
+</style>
+<body>
+    <img src="images/bgkey.jpg" id="back">
+   
+</body>
+<script>
+    var sb = document.createElement("img")
+    document.body.appendChild(sb)
+    var back = document.getElementById("back")
+    back.style="position:absolute; left: 0px; top:-3000px;"
+    
+    sb.src="images/sb.gif"
+    back.style="position: absolute; width: 200px; left:0px;top:0px"
+    var k
+    var l = 0
+    var t = 0
+    var bl = 0
+
+    function f1(e)
+    {
+        k =e.key
+        switch(k)
+        {
+            case "ArrowRight" :
+                if (l<window.innerWidth-200)
+                {
+                 l+=10
+                 bl-=10
+                }
+               sb.style.left = l+"px"
+                sb.style.transform = "rotateY(180deg)"
+                back.style.left=bl+"px"
+            break;
+
+
+
+            case "ArrowLeft" :
+                if (l<window.innerWidth-200)
+                {
+                  l+=10
+                  bl-=10
+                }
+               sb.style.left = l+"px"
+                sb.style.transform = "rotateY(0deg)"
+                back.style.left=bl+"px"
+            break;
+
+
+            case "ArrowDown" :
+                if (l<window.innerWidth-200)
+                {
+                  t=t+5
+                }
+               sb.style.top = t+"px"
+                sb.style.transform = "rotateY(0deg)"
+                back.style.left=bl+"px"
+            break;
+
+
+            case "ArrowUp" :
+                if (t>0)
+                {
+                  t=t-5
+                }
+               sb.style.top = t+"px"
+                sb.style.transform = "rotateY(0deg)"
+                back.style.left=bl+"px"
+            break;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+    }
+</script>
+</html>
